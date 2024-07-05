@@ -8,7 +8,23 @@ Première Partie : Développer un micro-service
         ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1dcb2f59-40f6-4ddb-a6d5-3a9e9c34111e)
        Après avoir généré le projet, nous l'avons extrait et ouvert avec IntelliJ IDEA.
        ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a64e892e-b7ff-4ed6-bc44-bfcf07faf2f5)
+       On va effectuer les tâches suivantes :
+           1. La création des entités :
+                 - Dans le package org.sid.bank_account_service, nous avons créé le package entities.
+                   ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/21d1ef81-d2d1-4c81-8e13-31c05b0a2765)
+                 - Nous avons créé l'entité BankAccount.
+                   ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/323f9620-ab72-4ec9-a0d1-31ea350a0022)
+                 - Nous avons créé le package enums pour définir l'énumération AccountType, qui contiendra les différents types de comptes.
+                   ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/5b8106dd-8920-44e1-b1b8-b07a92ea3180)
+                   ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c373cab6-5431-4862-bc6d-462f35a7fe07)
 
+
+     
+     
+     
+                 
+
+   
 
 
         
