@@ -6,6 +6,9 @@ Première Partie : Développer un micro-service
         ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/ad81addb-e849-4ae6-bbf8-deb9760dc29f)
         Les dépendances de ce projet incluent : Spring Web, Spring Data JPA, H2 Database, Lombok, et Spring for GraphQL.
         ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1dcb2f59-40f6-4ddb-a6d5-3a9e9c34111e)
+       Après avoir généré le projet, nous l'avons extrait et ouvert avec IntelliJ IDEA.
+       ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a64e892e-b7ff-4ed6-bc44-bfcf07faf2f5)
+
 
 
         
