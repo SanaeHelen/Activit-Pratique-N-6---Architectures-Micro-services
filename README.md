@@ -1,7 +1,13 @@
 # Activit-Pratique-N-6---Architectures-Micro-services
 
 Première Partie : Développer un micro-service
-   - MIcro Service avec Web Service RESTFUL : 
+   - MIcro Service avec Web Service RESTFUL :
+        Nous avons lancé le projet en utilisant le site : https://start.spring.io/
+        ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/ad81addb-e849-4ae6-bbf8-deb9760dc29f)
+        Les dépendances de ce projet incluent : Spring Web, Spring Data JPA, H2 Database, Lombok, et Spring for GraphQL.
+        ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1dcb2f59-40f6-4ddb-a6d5-3a9e9c34111e)
+
+
         
    - Micro-SERVICE wvec web service GRAPHQL :  
        https://www.youtube.com/watch?v=FsdR09jlqaE
