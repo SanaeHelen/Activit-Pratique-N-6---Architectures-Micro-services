@@ -17,6 +17,37 @@ Première Partie : Développer un micro-service
                  - Nous avons créé le package enums pour définir l'énumération AccountType, qui contiendra les différents types de comptes.
                    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/5b8106dd-8920-44e1-b1b8-b07a92ea3180)
                    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c373cab6-5431-4862-bc6d-462f35a7fe07)
+           2. L'utilisation de Spring Data JPA :
+                  Nous avons créé un nouveau package, repositories, qui contient l'interface BankAccountRepository, héritant de l'interface JpaRepository.
+                  ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b32465d6-c639-42d8-aeac-2585b1946a9b)
+                  ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/0547fad3-6eed-4d1e-a0f4-957098f8fd0b)
+           3. Teste :
+               Nous avons défini dans la classe BankAccountServiceApplication.java une méthode qui, au démarrage, crée et enregistre 10 comptes bancaires aléatoires dans le repository BankAccountRepository.
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/28c8eb67-52ce-4b67-ad54-ba0863735b1b)
+              Dans le fichier application.properties, nous avons configuré une base de données H2 en mémoire nommée "account-db", activé la console H2, et spécifié le port d'écoute à 8081 pour l'application Spring Boot.
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/4e2b914b-b6d0-436d-acc6-70cadc6478b7)
+          4.L'exécution de l'application
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c95d15d4-4986-4a04-9c15-e74b7ffcb784)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/69aee1cb-bb56-48f4-99f4-d811e5dabcbf)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f267c43a-7e1c-4c89-a6b1-7339dbc3bed7)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b26a0f61-ddf7-4082-ad82-7b23dd81ecc5)
+              Nous avons observé que l'attribut "type" est stocké sous forme de valeurs binaires (0 ou 1). Pour le stocker sous forme de chaîne de caractères, nous allons ajouter l'annotation suivante dans l'entité BankAccount : @Enumerated(EnumType.STRING) au-dessus de l'attribut "type" de type AccountType.
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/6f7d685a-2dd2-4acd-b579-79f4f584541c)
+               Nous allons relancer l'exécution de l'application.
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/d7fcf03b-2dc5-40c8-b896-d00fe653b669)
+               L'attribut "type" est stocké sous forme de chaîne de caractères avec les valeurs : "SAVING_ACCOUNT" ou "CURRENT_ACCOUNT".
+ 
+
+     
+
+
+
+
+
+
+
+
+
 
 
      
