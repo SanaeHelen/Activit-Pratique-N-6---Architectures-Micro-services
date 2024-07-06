@@ -77,6 +77,7 @@ Première Partie : Développer un micro-service
  
 
         8. Creation de Micro service avec web Rest :
+      
 
              Nous avons créé le package web dans lequel nous avons ajouté une classe Java nommée AccountRestController.
 
@@ -114,7 +115,9 @@ Première Partie : Développer un micro-service
            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f9aaa676-7272-44fe-b009-96b4528797d6)
 
       
-               
+        9. La documentation avec Swagger :
+
+              Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml selon les instructions du site : https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui/1.8.0.
 
      
 
