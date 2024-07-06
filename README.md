@@ -56,7 +56,10 @@ Première Partie : Développer un micro-service
 
 
        7. L'exécution de l'application
-    
+       
+          
+            Après avoir exécuté l'application, nous ouvrons un navigateur et saisissons l'URL : http://localhost:8081/h2-console pour nous connecter à la base de données "account-db".
+          
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c95d15d4-4986-4a04-9c15-e74b7ffcb784)
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/69aee1cb-bb56-48f4-99f4-d811e5dabcbf)
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f267c43a-7e1c-4c89-a6b1-7339dbc3bed7)
@@ -72,8 +75,45 @@ Première Partie : Développer un micro-service
           
             L'attribut "type" est stocké sous forme de chaîne de caractères avec les valeurs : "SAVING_ACCOUNT" ou "CURRENT_ACCOUNT".
  
-                
-           
+
+        8. Creation de Micro service avec web Rest :
+
+             Nous avons créé le package web dans lequel nous avons ajouté une classe Java nommée AccountRestController.
+
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/72de8053-1e71-4ddf-b833-5e582fca2c07)
+
+
+            Les méthodes de la classe AccountRestController permettent de récupérer tous les comptes bancaires, de récupérer un compte par son ID, de créer un nouveau compte, de mettre à jour un compte existant, et de supprimer un compte par son ID.
+
+
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/89a2fa85-5046-4ff8-aabc-5a67e513907c)
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/9e23c210-3d1c-4898-9fff-256f4f168714)
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/d203a439-64a0-4bcc-b0cb-a0d551ab8418)
+
+           Après avoir exécuté l'application, saisissez l'URL suivante dans le navigateur : http://localhost:8081/bankAccounts pour voir la liste des comptes. REST affiche les données par défaut en format JSON, mais le client peut choisir le format (JSON ou XML) en spécifiant le format souhaité dans la requête HTTP.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/fb2c0a60-3e92-4eba-ba73-7d45d222b28c)
+
+
+            Ensuite, nous avons testé les méthodes dans Postman, un outil populaire pour tester et développer des APIs, permettant d'envoyer des requêtes HTTP et d'analyser les réponses.
+            Nous avons utilisé la méthode GET pour envoyer une requête à l'URL http://localhost:8081/bankAccounts afin de récupérer tous les comptes.
+     
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a5ca6938-a1e0-4fae-ba94-0199651c9689)
+
+            Nous avons envoyé une requête pour récupérer le compte dont l'ID est passé en paramètre à l'URL : http://localhost:8081/bankAccounts/2874d5e7-e148-4a55-83e9-ba37b8978004.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cb067307-5d85-4645-a945-286e3c001de1)
+    
+            Nous avons utilisé la requête HTTP POST à l'URL http://localhost:8081/bankAccounts pour créer et sauvegarder un nouveau compte, en envoyant les données du compte dans le corps de la requête.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/32224b66-b78a-488e-9b0d-97fbbbb1eea5)
+
+
+           Pour mettre à jour un compte, nous allons passer l'ID dans la requête : http://localhost:8081/bankAccounts/be371adf-e07a-40c2-9de7-35e9899209fb avec la méthode PUT, en modifiant l'attribut "currency" avec la valeur "MAD".
+
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f9aaa676-7272-44fe-b009-96b4528797d6)
+
+      
                
 
      
