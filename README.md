@@ -117,7 +117,11 @@ Première Partie : Développer un micro-service
       
         9. La documentation avec Swagger :
 
-              Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml selon les instructions du site : https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui/1.8.0.
+            Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml selon les instructions du site : https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui/1.8.0.
+    
+           
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/094fdf25-3464-4cab-bc4f-045c0e06d10d)
+
 
      
 
