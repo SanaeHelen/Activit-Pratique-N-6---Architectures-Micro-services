@@ -44,7 +44,7 @@ Première Partie : Développer un micro-service
              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/0547fad3-6eed-4d1e-a0f4-957098f8fd0b)
 
 
-       5. Teste :
+       5. L'enregistrement des comptes bancaire dans la base de données  :
           
              Nous avons défini dans la classe BankAccountServiceApplication.java une méthode qui, au démarrage, crée et enregistre 10 comptes bancaires aléatoires dans le repository BankAccountRepository.
           
