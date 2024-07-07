@@ -300,6 +300,7 @@ Première Partie : Développer un micro-service
 
 
        5. Gestion des exceptions :
+          
             - Pour gérer les exceptions de manière appropriée, nous avons créé un nouveau package nommé "exceptions", où nous avons implémenté la classe "CustomDataFetcherExceptionResolver".
               
                 ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/79fcccad-67a6-477d-9266-6832041e71bb)
@@ -309,10 +310,106 @@ Première Partie : Développer un micro-service
                 ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/9b836bf5-366e-4480-a9ac-bd364021499e)
 
            
-       7. Création de l'entité Customer 
-       8. scbvkdbkbvksdbvsd
-       9. vksdvksdkvds
-       10. sksdvkdsbvkdfbvjb
+       7. Teste des méthodes :
+          
+           - Après avoir lancé l'application , nous avons utilisé le lien http://localhost:8081/graphiql?path=/graphql pour interagir avec GraphQL.
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/db12da58-f451-44dd-9931-946476ceefba)
+
+           - Récupérer la liste des comptes en spécifiant les attributs :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/17cf0003-d447-4d5a-8797-dfa2c5c4ba84)
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a29f8fda-f225-4c32-a917-7df7593808b4)
+
+
+           - Récupérer un compte en passant son ID comme paramètre :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/6ff88902-f616-4de5-a0b7-a81b1f167447)
+
+           - Ajouter un compte :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c3ef679f-e7bc-419d-ae91-1301b90ec51f)
+
+           - Ajouter un compte en utilisant les paramètres :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c3d2d701-fc72-4116-b8fe-31847b918e26)
+
+           - modifier un compte :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/6231bfe1-4db8-42ad-ac6b-054e15b60cf7)
+
+           - Supprimer un compte :
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/e2986127-eb0d-4132-bb29-97d7af51310e)
+
+       9. Création de l'entité Customer :
+           
+           - Dans le package des entités, nous avons ajouté la classe représentant l'entité Customer.
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cc0ff1b2-74b2-40d3-9fce-313386c59b99)
+
+           - Cette classe Java définissant une entité Customer est annotée pour la persistance avec JPA, incluant un ID auto-généré, un nom, et une relation One-to-Many avec une liste de BankAccount liés par le champ "customer".
+             
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/5587380c-0314-4c1a-9f68-4020d4be27ad)
+
+           - Dans la classe d'entité BankAccount, nous avons introduit l'attribut customer avec l'annotation @ManyToOne pour établir une relation plusieurs-à-un avec l'entité Customer.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/73d6bc38-34cf-46c6-b333-bcb3852825ef)
+
+           - Dans le package des repositories, nous avons inclus l'interface CustomerRepository.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/bc9150dc-5684-4b08-8329-ce10e8899471)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b1e98096-ebdb-448a-8e58-ac54a6c8c402)
+
+           - Dans la classe BankAccountServiceApplication, cette configuration utilise un CommandLineRunner comme bean pour initialiser des données de test. Il crée plusieurs clients dans la base de données et leur associe chacun plusieurs comptes bancaires aléatoires de types différents (compte courant ou épargne) avec des soldes aléatoires.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/124a44f6-68fc-41a1-852c-6d854ef79731)
+
+
+           - Nous accédons à la base de données pour consulter les clients créés via le lien : 'http://localhost:8081/h2-console/'.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/db99bf27-8019-4e25-bf66-32297d668398)
+    
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2a9310eb-69ba-46ff-acdf-00f9dbcbacd9)
+    
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1e0f1e55-922f-48db-917d-7dbc54fc094b)
+
+
+
+           - Dans la classe BankAccountGraphQLController, nous avons ajouté une méthode pour récupérer les clients.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1542d032-c8d8-466e-8863-b7fb88804b3a)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/fb131df8-4d83-4ba5-8380-bcf5b660c391)
+
+
+           - Dans le fichier schema.graphqls, nous avons ajouté la méthode Customers pour représenter les clients ainsi que le type Customer.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/df612d7a-93d3-4c57-b6f1-462bb39bbd29)
+
+           - Récupérer les comptes associés au nom du client.
+    
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a6eba71f-bce6-4803-950a-b68281abfba2)
+
+           - Récupérer les clients :
+    
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/bd63bafa-2e4e-47ad-b92d-1409654ccba7)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/645feed6-95f3-477b-9ef8-af06ec7a860e)
+
+
+
+       11. Problème de REST :
+           
+           - Si nous consultons les comptes via REST à l'aide de la requête : `http://localhost:8081/api/bankAccounts`, nous observons des données bidirectionnelles. C'est-à-dire que l'attribut customer de chaque compte affiche tous les comptes de ce client, créant ainsi une boucle infinie.
+    
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/45871ca2-9607-4d84-acac-544188cd2e40)
+
+           - Pour résoudre ce problème, nous allons ajouter l'annotation `@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)` au-dessus de l'attribut `bankAccounts`.
+             
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/bea74548-9cbc-4bad-9914-e4fe586bad0f)
+               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b4f4feec-6319-48e6-a708-1c14f7777252)
+
+
+
 
 
      
