@@ -116,6 +116,8 @@ Première Partie : Développer un micro-service
 
       
         9. La documentation avec Swagger :
+        
+        
 
             Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml .
     
@@ -168,6 +170,41 @@ Première Partie : Développer un micro-service
            
               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2952bdfb-e049-4989-8abd-dd36098df9fb)
 
+
+      10. L'utilisation de spring DATA REST :
+
+            Nous avons ajouté la dépendance de Spring Data REST dans le fichier `pom.xml`.
+
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2fbc6113-4cda-43c1-b7e7-4db07fec2877)
+
+            Nous avons ajouté l'annotation `@RepositoryRestResource` à l'interface `BankAccountRepository` pour démarrer un web service RESTful permettant de gérer l'entité `BankAccount`.
+
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/74c0a4ce-de96-40cb-99b7-061682e5cafd)
+
+            Dans la classe `AccountRestController`, nous avons ajouté l'annotation `@RequestMapping`.
+
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/d90425af-b5ea-4de7-aa83-261daebb61e9)
+
+            Nous avons démarré l'application et en accédant au lien http://localhost:8081/bankAccounts, elle nous a retourné un fichier en format JSON.
+            Ce fichier JSON représente une réponse typique d'une API REST qui gère des comptes bancaires (`bankAccounts`). Voici une brève explication de ses éléments :
+
+            - `_embedded`: Contient une liste de comptes bancaires (`bankAccounts`), chaque compte étant représenté par ses attributs tels que `createdAt` (date de création), `balance` (solde), `currency` (devise), `type` (type de compte), et des liens `_links` qui pointent vers des ressources spécifiques de chaque compte.
+              
+            - `_links`: Contient des liens permettant de naviguer dans les résultats paginés (`self` pour la page actuelle et `profile` pour le profil de la ressource `bankAccounts`).
+            
+            - `page`: Contient des informations de pagination comme `size` (nombre d'éléments par page), `totalElements` (nombre total d'éléments dans la réponse), `totalPages` (nombre total de pages) et `number` (numéro de la page actuelle).
+            
+            En résumé, ce fichier JSON fournit une représentation structurée et paginée des comptes bancaires disponibles, facilitant ainsi la gestion et la navigation à travers ces ressources via une API RESTful.
+ 
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/d82f0de2-87a5-47cd-ad17-a1442e6ee270)
+
+           Nous avons inclus la méthode `findByType()` dans l'interface `BankAccountRepository`.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/0f5b554b-ea9d-421a-852d-3f3162ca0802)
+
+           Ensuite, nous avons accédé au lien http://localhost:8081/bankAccounts/search/findByType?type=SAVING_ACCOUNT pour afficher uniquement les comptes de type SAVING_ACCOUNT.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/8b83a0bd-1839-46f3-a86a-a3c6115ff902)
 
 
          
