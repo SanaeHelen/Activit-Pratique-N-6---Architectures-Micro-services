@@ -142,6 +142,21 @@ Première Partie : Développer un micro-service
             Ce fichier décrit comment accéder et interagir avec l'API, les types de données utilisés, et les réponses attendues.
 
 
+            On peut tester le web service sans utiliser Postman en utilisant Swagger UI. Par exemple, nous avons testé la méthode `bankAccount` qui retourne un compte en passant son ID comme paramètre.
+
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2130047e-cdc7-43ff-8cbe-3195b7caf187)
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/3c0359e0-ce9c-4ece-8f77-bf1323603eea)
+
+
+            Nous avons également ajouté un compte :
+
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a369013b-ccd5-48c6-b73c-7285bea8508f)
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/9409666b-e895-4de5-a137-ace786367029)
+
+            Le compte a été bien ajouté.
+
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/57481b99-0d13-45e0-bd31-6f2a1f839d97)
+
 
 
 
