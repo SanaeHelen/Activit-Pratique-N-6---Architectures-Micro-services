@@ -117,17 +117,29 @@ Première Partie : Développer un micro-service
       
         9. La documentation avec Swagger :
 
-            Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml selon les instructions du site : https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui/1.8.0.
+            Nous avons ajouté la dépendance springdoc-openapi-ui dans le fichier pom.xml .
     
-           
-           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/094fdf25-3464-4cab-bc4f-045c0e06d10d)
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/32688657-697d-49cf-bd7e-7be84a8a6204)
 
+            Nous avons accédé à la documentation Swagger via le lien suivant après l'exécution de l'application : http://localhost:8081/swagger-ui/index.html.
 
-     
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/4d0ac51f-0be5-4502-af18-eb6e029486d6)
 
+            Nous avons accédé à la documentation de notre REST API via la requête : http://localhost:8081/v3/api-docs, ce qui génère un fichier JSON.
 
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/38ca5443-2f5f-4dd8-bc04-12d43dc1a41b)
 
+            Ce fichier JSON est une définition OpenAPI 3.0.1 pour la documentation de notre REST API. Il inclut :
 
+            - **Informations de base** : le titre de l'API ("OpenAPI definition") et sa version ("v0").
+            - **Serveur** : l'URL de base du serveur (http://localhost:8081).
+            - **Endpoints** : 
+              - `/bankAccounts/{id}` avec des méthodes `GET`, `PUT`, et `DELETE` pour récupérer, mettre à jour et supprimer un compte bancaire spécifique, en utilisant l'ID comme paramètre de chemin.
+              - `/bankAccounts` avec des méthodes `GET` et `POST` pour récupérer tous les comptes bancaires et créer un nouveau compte.
+            - **Composants** :
+              - **Schémas** : la définition de l'objet `BankAccount`, qui inclut des propriétés comme `id`, `createdAt`, `balance`, `currency`, et `type`.
+            
+            Ce fichier décrit comment accéder et interagir avec l'API, les types de données utilisés, et les réponses attendues.
 
 
 
