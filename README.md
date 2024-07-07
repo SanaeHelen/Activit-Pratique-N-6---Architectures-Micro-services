@@ -17,7 +17,7 @@ Première Partie : Développer un micro-service
      
        ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/a64e892e-b7ff-4ed6-bc44-bfcf07faf2f5)
      
-       On va effectuer les tâches suivantes :
+       Nous avons effectué les tâches suivantes :
 
        1. La création des entités :
           
