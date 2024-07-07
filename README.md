@@ -264,8 +264,55 @@ Première Partie : Développer un micro-service
 
 
         
-   - Micro-SERVICE wvec web service GRAPHQL :  
-       https://www.youtube.com/watch?v=FsdR09jlqaE
+   - Micro-SERVICE avec web service GRAPHQL :
+     
+       1. Création du schema :
+          
+            Dans le package `ressources` du projet, nous avons créé un package nommé `graphql`. Dans ce dernier, nous avons créé un fichier nommé `schema.graphqls`.
+          
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/6e182576-074b-49a3-9ba7-cf88b2061ffb)
+
+            Cette définition GraphQL décrit les types de requêtes (`Query`) et de mutations (`Mutation`) possibles, ainsi que les types de données (`BankAccount`) et les entrées (`BankAccountDTO`) utilisés dans le système. Le type `Query` permet de récupérer une liste de comptes bancaires (`accountsList`) ou un compte spécifique par son ID (`bankAccountById`). Le type `Mutation` permet d'ajouter (`addAccount`), de mettre à jour (`updateAccount`), ou de supprimer (`deleteAccount`) un compte bancaire. Le type `BankAccount` représente un compte bancaire avec des champs comme l'ID, la date de création, le solde, la devise et le type de compte. L'input `BankAccountDTO` est utilisé pour fournir les données nécessaires à la création ou à la mise à jour d'un compte, incluant le solde, la devise et le type de compte.
+            
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/679d9ac7-875a-4e46-b52d-b13774b4b962)
+
+            Nous avons ajouté la ligne `spring.graphql.graphiql.enabled=true` dans le fichier `application.properties` pour activer l'interface GraphiQL, un outil intégré à Spring Boot qui permet de tester et d'explorer les API GraphQL de manière interactive. Cela facilite le développement et le débogage des requêtes et mutations GraphQL.
+          
+             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/52471e2d-8f6c-4827-bde4-0066b5c66cd5)
+
+       3. Implémentation du service :
+          
+            - Dans le package `web`, nous avons ajouté la classe `BankAccountGraphQLController` pour implémenter les méthodes de gestion des comptes bancaires.
+           La classe `BankAccountGraphQLController`, annotée avec `@Controller`, gère les requêtes GraphQL pour les comptes bancaires. Elle utilise les annotations `@QueryMapping` et `@MutationMapping` pour définir les requêtes et mutations respectivement. La méthode `accountsList` retourne tous les comptes bancaires, tandis que `bankAccountById` récupère un compte spécifique par son identifiant. Les méthodes de mutation `addAccount` et `updateAccount` permettent d'ajouter et de mettre à jour un compte bancaire, et `deleteAccount` supprime un compte en utilisant son identifiant. Les services `BankAccountRepository` et `AccountService` sont injectés via `@Autowired` pour accéder aux données et aux services de compte respectivement.
+          
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/6da2ef48-452c-49bd-ad6c-74830499f3ff)
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/69d73c29-c532-49c1-a142-206a18bb24ab)
+
+           - Nous avons ajouté la méthode `updateAccout` dans l'interface `AccountService` du package `service`.\
+             
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/29d5f53d-9b89-4517-a332-2ff3e0deee6f)
+
+           - Et dans la classe `AccountServiceImpl`, nous avons ajouté l'implémentation de cette méthode.
+             
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/01b88a10-18b5-4157-b766-6216afae3493)
+
+
+
+
+       5. Gestion des exceptions :
+            - Pour gérer les exceptions de manière appropriée, nous avons créé un nouveau package nommé "exceptions", où nous avons implémenté la classe "CustomDataFetcherExceptionResolver".
+              
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/79fcccad-67a6-477d-9266-6832041e71bb)
+
+            - Cette classe annotée avec `@Component` étend `DataFetcherExceptionResolverAdapter` pour personnaliser la résolution des erreurs lors de l'exécution de requêtes GraphQL, en retournant une seule erreur GraphQL avec le message de l'exception.
+    
+                ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/9b836bf5-366e-4480-a9ac-bd364021499e)
+
+           
+       7. Création de l'entité Customer 
+       8. scbvkdbkbvksdbvsd
+       9. vksdvksdkvds
+       10. sksdvkdsbvkdfbvjb
 
 
      
