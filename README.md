@@ -36,7 +36,7 @@ Première Partie : Développer un micro-service
 
 
 
-       3. L'utilisation de Spring Data JPA :
+       2. L'utilisation de Spring Data JPA :
           
              Nous avons créé un nouveau package, repositories, qui contient l'interface BankAccountRepository, héritant de l'interface JpaRepository.
      
@@ -44,7 +44,7 @@ Première Partie : Développer un micro-service
              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/0547fad3-6eed-4d1e-a0f4-957098f8fd0b)
 
 
-       5. L'enregistrement des comptes bancaire dans la base de données  :
+       3. L'enregistrement des comptes bancaire dans la base de données  :
           
              Nous avons défini dans la classe BankAccountServiceApplication.java une méthode qui, au démarrage, crée et enregistre 10 comptes bancaires aléatoires dans le repository BankAccountRepository.
           
@@ -55,9 +55,6 @@ Première Partie : Développer un micro-service
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/4e2b914b-b6d0-436d-acc6-70cadc6478b7)
 
 
-       7. L'exécution de l'application
-       
-          
             Après avoir exécuté l'application, nous ouvrons un navigateur et saisissons l'URL : http://localhost:8081/h2-console pour nous connecter à la base de données "account-db".
           
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c95d15d4-4986-4a04-9c15-e74b7ffcb784)
@@ -76,7 +73,7 @@ Première Partie : Développer un micro-service
             L'attribut "type" est stocké sous forme de chaîne de caractères avec les valeurs : "SAVING_ACCOUNT" ou "CURRENT_ACCOUNT".
  
 
-        8. Creation de Micro service avec web Rest :
+        4. Creation de Micro service avec web Rest :
       
 
              Nous avons créé le package web dans lequel nous avons ajouté une classe Java nommée AccountRestController.
@@ -115,7 +112,7 @@ Première Partie : Développer un micro-service
            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f9aaa676-7272-44fe-b009-96b4528797d6)
 
       
-        9. La documentation avec Swagger :
+        5. La documentation avec Swagger :
         
         
 
@@ -171,7 +168,7 @@ Première Partie : Développer un micro-service
               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2952bdfb-e049-4989-8abd-dd36098df9fb)
 
 
-      10. L'utilisation de spring DATA REST :
+       6. L'utilisation de spring DATA REST :
      
 
             Nous avons ajouté la dépendance de Spring Data REST dans le fichier `pom.xml`.
@@ -224,7 +221,7 @@ Première Partie : Développer un micro-service
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/04ef26e9-ac4e-4d2f-9988-6ec8a722f429)
 
 
-      11. Le respect des normes :
+       7. Le respect des normes :
 
           Pour respecter les normes, nous allons créer une couche de service comprenant l'interface `AccountService`, qui contient la méthode `addAccount` pour ajouter un compte, ainsi que la classe `AccountServiceImpl` qui implémente cette interface.
 
