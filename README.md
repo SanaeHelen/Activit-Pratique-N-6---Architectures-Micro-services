@@ -206,6 +206,24 @@ Première Partie : Développer un micro-service
 
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/8b83a0bd-1839-46f3-a86a-a3c6115ff902)
 
+           Pour utiliser les projections, nous avons créé une nouvelle interface nommée AccountProjection dans le package entities.
+          
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/7521f76d-183f-402b-b076-6c2e43e1faa2)
+
+           Si on spécifie le nom de la projection dans la requête, par exemple http://localhost:8081/bankAccounts?projection=p1, cela nous renverra l'ID et le type des comptes bancaires.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1325385b-c123-47bd-9099-069f6d954a85)
+
+          Nous avons ajouté les annotations `@RestResource` et `@Param` à l'interface `BankAccountRepository`.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b127cbd3-e5b9-4a47-843e-c17f955d03e4)
+
+          Nous avons utilisé le lien `http://localhost:8081/bankAccounts/search/byType?t=SAVING_ACCOUNT` au lieu de `http://localhost:8081/bankAccounts/search/findByType?type=SAVING_ACCOUNT`.
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/04ef26e9-ac4e-4d2f-9988-6ec8a722f429)
+
+
+
 
          
      
