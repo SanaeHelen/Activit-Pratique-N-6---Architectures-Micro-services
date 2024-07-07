@@ -172,6 +172,7 @@ Première Partie : Développer un micro-service
 
 
       10. L'utilisation de spring DATA REST :
+     
 
             Nous avons ajouté la dépendance de Spring Data REST dans le fichier `pom.xml`.
 
@@ -223,9 +224,40 @@ Première Partie : Développer un micro-service
             ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/04ef26e9-ac4e-4d2f-9988-6ec8a722f429)
 
 
+      11. Le respect des normes :
+
+          Pour respecter les normes, nous allons créer une couche de service comprenant l'interface `AccountService`, qui contient la méthode `addAccount` pour ajouter un compte, ainsi que la classe `AccountServiceImpl` qui implémente cette interface.
+
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f72542de-1945-41d8-8577-314d7b076b84)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f2052721-59d0-4eb7-92df-9e9a3f0c66fd)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/90510655-0d7f-4aaa-89f3-6dfb8abef6f3)
+
+          Nous avons également ajouté le package DTO, qui contient les classes `BankAccountRequestDTO` et `BankAccountResponseDTO`.
+    
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/55fc3edf-3aa7-4d7a-8f86-f5978e10e6f7)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/87bb002f-2bc9-4909-991f-968a91e00036)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2cb54707-2d34-4246-9435-fe6417486bad)
+
+          Nous avons créé le package `mappers`, qui contient la classe `AccountMapper` avec la méthode `fromBankAccount` pour effectuer le mapping.
+
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/dc71d4ea-e561-46ff-a00d-913e476d0cab)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f20c45a7-c734-41e7-9a8c-9e5bfd9a54fb)
+
+          Nous avons modifié la méthode `save` de la classe `AccountRestController`.
+
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1acb5ea5-15a0-4a99-b9e9-64d7a61eefbb)
+           ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/66567f32-dfcc-4768-83ee-c78f87c1448f)
+
+          Après l'exécution de l'application, nous avons testé l'ajout d'un compte en accédant au lien : [http://localhost:8081/swagger-ui/index.html#](http://localhost:8081/swagger-ui/index.html#)
+
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/9d073dc3-c300-4d3d-b2bd-dddb3d2f9470)
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/4cf81bd3-e0fd-4a84-8709-49c78e890903)
+    
+          Le compte a été bien ajouté.
+          
+            ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/177f3876-7b28-498a-969a-5a12374b3c3d)
 
 
-         
      
      
      
