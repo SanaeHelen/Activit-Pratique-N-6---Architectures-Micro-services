@@ -158,10 +158,19 @@ Première Partie : Développer un micro-service
               ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/57481b99-0d13-45e0-bd31-6f2a1f839d97)
 
 
+             On peut également importer la documentation de l'API que nous voulons tester dans Postman. Pour ce faire, accédez à l'option "Import" dans Postman, puis saisissez le lien : http://localhost:8081/v3/api-docs.
+
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/40325155-ba51-421e-896d-588d74526a5b)
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/3893aa90-b971-40de-aac4-797a88b511d3)
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/f5f2da8f-e713-4428-8415-fe027209eaa3)
+    
+             Nous avons testé la méthode `bankAccounts` avec la méthode GET pour récupérer tous les comptes.
+           
+              ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/2952bdfb-e049-4989-8abd-dd36098df9fb)
 
 
 
-
+         
      
      
      
