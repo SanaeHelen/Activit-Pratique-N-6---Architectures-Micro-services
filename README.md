@@ -419,15 +419,30 @@
 Objectif :
 Créer une application basée sur les micro-services qui permet des gérer des clients et des comptes bancaire. chaque compte appartient à un client.
 Travail à faire :
-1. Créer le micro-service Discovery Service
     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1c05dff2-3e9e-4a1c-9eb1-d2708df1b18c)
-    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/91a9b741-fa01-4540-a53b-2c5236d75a38)
-    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cbb4dda5-90d9-4d68-8b57-2e7eaaefe920)
-
+   
+1. Créer le micro-service Discovery Service
+   
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/488fce01-520b-473d-8109-8acfefd9e923)
 
 
 3. Créer le micro-service Config Service
-4. Créer le Micro-service Customer Service
-5. Créer le micro-service Account Service
-6. Créer un frontend basé sur Angular
-7. Automatiser le déploiement de l'ensemble des micro-services en utilisant Docker ret Docker Compose
+   
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1fdabfa0-3144-4d5d-8813-dc8d8e63a334)
+
+5. Créer le Micro-service Customer Service
+   
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/91a9b741-fa01-4540-a53b-2c5236d75a38)
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cbb4dda5-90d9-4d68-8b57-2e7eaaefe920)
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/8c96d393-8ab2-4f49-af1c-d516dbb8455a)
+
+7. Créer le micro-service Account Service
+   
+    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1c406fe5-fda1-44ec-9f67-b63ca2e581f2)
+
+9. Créer le micro-service Gateway Service
+    
+     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c19ca8ab-fe33-46ae-96b7-af61cb4fe413)
+
+11. Créer un frontend basé sur Angular
+12. Automatiser le déploiement de l'ensemble des micro-services en utilisant Docker ret Docker Compose
