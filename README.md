@@ -436,6 +436,21 @@ Travail à faire :
      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cbb4dda5-90d9-4d68-8b57-2e7eaaefe920)
      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/8c96d393-8ab2-4f49-af1c-d516dbb8455a)
 
+   - Les packages :
+     
+      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/396ed338-5aae-4bd7-a127-92e6b04667af)
+
+   - L'entite Customer :
+     
+      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/c3c29e12-d444-4c17-a39b-821b4c0b265f)
+
+   - L'interface CustomerRepository:
+     
+      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b87a4c28-3af9-4a07-a7fb-d3de1671576d)
+
+   - La classe CustomerRestController :
+  
+
 7. Créer le micro-service Account Service
    
     ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1c406fe5-fda1-44ec-9f67-b63ca2e581f2)
