@@ -449,6 +449,9 @@ Travail à faire :
       ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/b87a4c28-3af9-4a07-a7fb-d3de1671576d)
 
    - La classe CustomerRestController :
+
+      ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/0486ace2-42ad-4a4e-bb02-7d68a492ec95)
+
   
 
 7. Créer le micro-service Account Service
