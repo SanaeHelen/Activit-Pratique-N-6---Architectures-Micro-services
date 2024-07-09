@@ -414,14 +414,20 @@
 
 
      
-Deuxième partie : Développer une architecture micro-service :
+**Deuxième partie : Développer une architecture micro-service :**
 
 Objectif :
 Créer une application basée sur les micro-services qui permet des gérer des clients et des comptes bancaire. chaque compte appartient à un client.
 Travail à faire :
 1. Créer le micro-service Discovery Service
-2. Créer le micro-service Config Service
-3. Créer le Micro-service Customer Service
-4. Créer le micro-service Account Service
-5. Créer un frontend basé sur Angular
-6. Automatiser le déploiement de l'ensemble des micro-services en utilisant Docker ret Docker Compose
+    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/1c05dff2-3e9e-4a1c-9eb1-d2708df1b18c)
+    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/91a9b741-fa01-4540-a53b-2c5236d75a38)
+    ![image](https://github.com/SanaeHelen/Activit-Pratique-N-6---Architectures-Micro-services/assets/136022070/cbb4dda5-90d9-4d68-8b57-2e7eaaefe920)
+
+
+
+3. Créer le micro-service Config Service
+4. Créer le Micro-service Customer Service
+5. Créer le micro-service Account Service
+6. Créer un frontend basé sur Angular
+7. Automatiser le déploiement de l'ensemble des micro-services en utilisant Docker ret Docker Compose
